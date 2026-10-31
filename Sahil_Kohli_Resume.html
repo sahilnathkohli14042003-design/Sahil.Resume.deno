@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional resume of Sahil Kohli — MBA Banking & Finance candidate.">
+  <title>Sahil Kohli | Resume</title>
+  <style>
+    :root {
+      --ink: #17243a;
+      --muted: #65738a;
+      --accent: #b68a4b;
+      --accent-dark: #8e6734;
+      --line: #e5eaf0;
+      --paper: #ffffff;
+      --wash: #f4f6f9;
+      --navy: #14243d;
+      --navy-soft: #1d3454;
+      --white: #fff;
+      --shadow: 0 18px 55px rgba(18, 35, 58, .10);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--wash);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; padding: 14px max(24px, calc((100% - 1120px) / 2));
+      background: rgba(255,255,255,.92); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(229,234,240,.9);
+    }
+    .brand { font-size: .82rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; color: var(--navy); }
+    .nav { display: flex; gap: 22px; color: var(--muted); font-size: .82rem; font-weight: 650; }
+    .nav a:hover { color: var(--accent-dark); }
+    .actions { display: flex; gap: 9px; }
+    .btn {
+      border: 1px solid var(--line); border-radius: 999px; padding: 9px 15px;
+      font: inherit; font-size: .8rem; font-weight: 750; cursor: pointer;
+      background: var(--white); color: var(--ink); transition: .2s ease;
+    }
+    .btn.primary { background: var(--navy); color: white; border-color: var(--navy); }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 7px 18px rgba(18,35,58,.12); }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 42px auto 70px; }
+    .hero {
+      position: relative; overflow: hidden; display: grid; grid-template-columns: 1.4fr .6fr;
+      gap: 34px; padding: 56px 58px; color: white; border-radius: 24px;
+      background: linear-gradient(125deg, var(--navy) 0%, #1c3556 72%, #294567 100%);
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 390px; height: 390px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.12); right: -110px; top: -180px;
+      box-shadow: 0 0 0 45px rgba(255,255,255,.025), 0 0 0 90px rgba(255,255,255,.02);
+    }
+    .eyebrow { color: #dfbd89; font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 800; }
+    h1 { margin: 12px 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 6vw, 4.7rem); line-height: 1.02; font-weight: 500; letter-spacing: -.04em; }
+    .role { color: #d7e0ec; font-size: 1.05rem; font-weight: 550; }
+    .intro { max-width: 650px; margin: 24px 0 0; color: #e2e8f0; font-size: .98rem; }
+    .hero-side { position: relative; z-index: 1; align-self: center; justify-self: end; width: 100%; max-width: 260px; }
+    .hero-stat { padding: 17px 0; border-top: 1px solid rgba(255,255,255,.2); }
+    .hero-stat:first-child { border-top: 0; }
+    .hero-stat strong { display: block; color: #e2c18e; font-family: Georgia, serif; font-size: 1.8rem; font-weight: 500; }
+    .hero-stat span { color: #d7e0ec; font-size: .8rem; }
+    .layout { display: grid; grid-template-columns:  minmax(0, 1.65fr) minmax(260px, .85fr); gap: 24px; margin-top: 24px; align-items: start; }
+    .maincol, .sidecol { display: grid; gap: 24px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: 0 8px 25px rgba(18,35,58,.035); }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; margin-bottom: 22px; }
+    h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 600; letter-spacing: -.02em; color: var(--navy); }
+    .section-kicker { color: var(--accent-dark); font-size: .68rem; letter-spacing: .15em; font-weight: 800; text-transform: uppercase; }
+    .summary { color: #46556b; margin: 0; font-size: .94rem; }
+    .entry { position: relative; padding: 0 0 23px 20px; border-left: 1px solid #d9e0e9; }
+    .entry:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .entry::before { content: ""; position: absolute; left: -5px; top: 5px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px #f7f1e8; }
+    .entry-top { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; }
+    h3 { margin: 0; color: var(--navy); font-size: 1rem; line-height: 1.35; }
+    .sub { margin: 4px 0 0; color: var(--muted); font-size: .83rem; }
+    .date { white-space: nowrap; color: var(--accent-dark); font-size: .75rem; font-weight: 800; }
+    ul.clean { padding-left: 18px; margin: 13px 0 0; color: #4e5d72; font-size: .88rem; }
+    ul.clean li { margin: 7px 0; padding-left: 3px; }
+    .taglist { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { padding: 7px 11px; border: 1px solid #e7eaf0; border-radius: 999px; background: #fafbfd; color: #42516a; font-size: .76rem; font-weight: 700; }
+    .contact-list { display: grid; gap: 14px; }
+    .contact-item { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; }
+    .contact-icon { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 9px; background: #f5f0e8; color: var(--accent-dark); font-size: .82rem; font-weight: 800; }
+    .contact-label { color: var(--muted); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 800; }
+    .contact-value { display: block; margin-top: 2px; color: var(--ink); font-size: .82rem; overflow-wrap: anywhere; }
+    .edu-row { padding: 13px 0; border-top: 1px solid var(--line); }
+    .edu-row:first-of-type { border-top: 0; padding-top: 0; }
+    .edu-title { font-weight: 800; color: var(--navy); font-size: .9rem; }
+    .edu-detail { color: var(--muted); font-size: .8rem; }
+    .edu-meta { display: flex; justify-content: space-between; gap: 12px; margin-top: 4px; color: var(--accent-dark); font-size: .75rem; font-weight: 750; }
+    .cert-list, .extra-list { list-style: none; padding: 0; margin: 0; }
+    .cert-list li, .extra-list li { padding: 10px 0; border-top: 1px solid var(--line); font-size: .82rem; color: #46556b; }
+    .cert-list li:first-child, .extra-list li:first-child { border-top: 0; padding-top: 0; }
+    .cert-year { float: right; color: var(--accent-dark); font-weight: 800; font-size: .72rem; margin-left: 10px; }
+    .extra-list strong { display: block; color: var(--navy); font-size: .83rem; }
+    .extra-list span { color: var(--muted); font-size: .76rem; }
+    .small-note { margin-top: 18px; padding: 13px 14px; background: #f8f5ef; border-radius: 12px; color: #6d5737; font-size: .76rem; }
+    footer { text-align: center; color: #8994a4; font-size: .74rem; padding: 28px 10px 0; }
+    @media (max-width: 800px) {
+      .nav { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 40px 30px; }
+      .hero-side { justify-self: stretch; display: grid; grid-template-columns: repeat(3,1fr); gap: 15px; max-width: none; }
+      .hero-stat { border-top: 1px solid rgba(255,255,255,.2); }
+      .layout { grid-template-columns: 1fr; }
+      .sidecol { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .sidecol .card:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px) {
+      .topbar { padding: 12px 16px; }
+      .brand { font-size: .7rem; }
+      .actions .btn { padding: 8px 10px; font-size: .72rem; }
+      .wrap { width: min(100% - 24px, 1120px); margin: 18px auto 40px; }
+      .hero { padding: 34px 24px; border-radius: 18px; }
+      .hero-side { grid-template-columns: 1fr; gap: 0; }
+      .hero-stat { padding: 10px 0; }
+      .hero-stat strong { font-size: 1.35rem; }
+      .card { padding: 22px 19px; }
+      .sidecol { grid-template-columns: 1fr; }
+      .sidecol .card:first-child { grid-column: auto; }
+      .entry-top { display: block; }
+      .date { display: inline-block; margin-top: 6px; }
+    }
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: white; }
+      .topbar { display: none; }
+      .wrap { width: 100%; margin: 0; }
+      .hero { box-shadow: none; border-radius: 12px; padding: 28px 32px; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .card { box-shadow: none; break-inside: avoid; padding: 20px; }
+      .layout { gap: 14px; margin-top: 14px; }
+      .maincol, .sidecol { gap: 14px; }
+      a { text-decoration: none; }
+      footer { padding-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Professional Profile</div>
+    <nav class="nav" aria-label="Page navigation">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+    </nav>
+    <div class="actions">
+      <button class="btn" onclick="window.print()">Print / Save PDF</button>
+      <a class="btn primary" href="mailto:sahil.kohli.26-28@ssbf.edu.in">Contact</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <div class="eyebrow">MBA Banking &amp; Finance · SSBF Pune</div>
+        <h1 id="name">Sahil Kohli</h1>
+        <div class="role">Finance · Equity Research · Business Development</div>
+        <p class="intro">
+          MBA Banking &amp; Finance candidate with a foundation in finance and analytical thinking.
+          Seeking opportunities to gain practical exposure, enhance financial knowledge and contribute
+          to organizational growth through continuous learning and professional development.
+        </p>
+      </div>
+      <div class="hero-side" aria-label="Career highlights">
+        <div class="hero-stat"><strong>15 months</strong><span>Business Development Associate · Richa Enterprises</span></div>
+        <div class="hero-stat"><strong>₹10 lakh</strong><span>Simulated investment portfolio managed during equity research project</span></div>
+        <div class="hero-stat"><strong>4 companies</strong><span>Publicly listed companies researched</span></div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <div class="maincol">
+        <section class="card" id="experience">
+          <div class="section-head"><h2>Experience</h2><span class="section-kicker">Professional journey</span></div>
+          <div class="entry">
+            <div class="entry-top">
+              <div><h3>Business Development Associate</h3><p class="sub">Richa Enterprises · New Delhi</p></div>
+              <span class="date">Mar 2025 – May 2026 · 15 months</span>
+            </div>
+            <ul class="clean">
+              <li>Assisted in inventory verification, order preparation and stock monitoring to support smooth day-to-day distribution operations for mobile accessories.</li>
+              <li>Interacted with retailers for order follow-ups, payment reminders and product promotion while collecting market feedback to understand customer preferences and product demand.</li>
+              <li>Verified incoming inventory against purchase invoices, coordinated with the sales representative and maintained accurate stock information to support business operations.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-head"><h2>Live Project</h2><span class="section-kicker">Equity research</span></div>
+          <div class="entry">
+            <div class="entry-top">
+              <div><h3>Equity Research Intern</h3><p class="sub">Fincrux Technologies · Mumbai</p></div>
+              <span class="date">Jan – Mar 2024 · 2 months (as listed)</span>
+            </div>
+            <ul class="clean">
+              <li>Evaluated 2 sectors by combining macroeconomic trends, company fundamentals and structured analytical frameworks to assess investment opportunities.</li>
+              <li>Researched 4 publicly listed companies, conducting SWOT, PESTLE and fundamental analysis to support investment recommendations.</li>
+              <li>Constructed and managed a simulated ₹10 lakh investment portfolio by applying asset allocation and diversification principles to evaluate investment decisions and portfolio performance.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card" id="education">
+          <div class="section-head"><h2>Education</h2><span class="section-kicker">Academic background</span></div>
+          <div class="edu-row">
+            <div class="edu-title">MBA – Banking and Finance</div>
+            <div class="edu-detail">Symbiosis School of Banking and Finance, Pune · Symbiosis International University</div>
+            <div class="edu-meta"><span>2026–2028 · Pursuing</span></div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-title">Bachelor of Business Administration (BBA)</div>
+            <div class="edu-detail">Narsee Monjee Institute of Management Studies, Bengaluru</div>
+            <div class="edu-meta"><span>2024</span><span>3.03 / 4 CGPA</span></div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-title">Class XII</div>
+            <div class="edu-detail">Delhi Public School, Faridabad · CBSE</div>
+            <div class="edu-meta"><span>2021</span><span>84%</span></div>
+          </div>
+          <div class="edu-row">
+            <div class="edu-title">Class X</div>
+            <div class="edu-detail">Delhi Public School, Faridabad · CBSE</div>
+            <div class="edu-meta"><span>2019</span><span>84.5%</span></div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidecol">
+        <section class="card">
+          <div class="section-head"><h2>Contact</h2><span class="section-kicker">Connect</span></div>
+          <div class="contact-list">
+            <div class="contact-item"><div class="contact-icon">☎</div><div><div class="contact-label">Phone</div><a class="contact-value" href="tel:+919811079128">+91 98110 79128</a></div></div>
+            <div class="contact-item"><div class="contact-icon">@</div><div><div class="contact-label">Email</div><a class="contact-value" href="mailto:sahil.kohli.26-28@ssbf.edu.in">sahil.kohli.26-28@ssbf.edu.in</a></div></div>
+            <div class="contact-item"><div class="contact-icon">in</div><div><div class="contact-label">LinkedIn</div><a class="contact-value" href="https://linkedin.com/in/sahilnathkohli" target="_blank" rel="noopener">linkedin.com/in/sahilnathkohli</a></div></div>
+            <div class="contact-item"><div class="contact-icon">⌖</div><div><div class="contact-label">Location</div><span class="contact-value">Faridabad, Haryana, India</span></div></div>
+          </div>
+          <div class="small-note">Languages: English and Hindi<br>Interests: Cricket and Tennis</div>
+        </section>
+
+        <section class="card" id="skills">
+          <div class="section-head"><h2>Skills</h2><span class="section-kicker">Skill highlights</span></div>
+          <div class="taglist">
+            <span class="tag">Advanced Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Financial Analysis</span>
+          </div>
+        </section>
+
+        <section class="card" id="credentials">
+          <div class="section-head"><h2>Certifications</h2><span class="section-kicker">Learning</span></div>
+          <ul class="cert-list">
+            <li>Finance for Non-Finance Professionals <span class="cert-year">2026</span><br><span class="sub">Coursera</span></li>
+            <li>Financial Accounting: Foundation <span class="cert-year">2026</span><br><span class="sub">Coursera</span></li>
+            <li>Impactful Workplace Communication for Career Launch <span class="cert-year">2026</span><br><span class="sub">Coursera</span></li>
+            <li>Basic Statistics <span class="cert-year">2026</span><br><span class="sub">Coursera</span></li>
+            <li>Investment Banking Job Simulation (Excel) <span class="cert-year">2023</span><br><span class="sub">Forage</span></li>
+            <li>Bloomberg Market Concepts <span class="cert-year">2023</span></li>
+            <li>Beginner to Pro in Excel: Financial Modeling and Valuation <span class="cert-year">2023</span><br><span class="sub">Udemy</span></li>
+            <li>Advanced Excel <span class="cert-year">2022</span><br><span class="sub">Skill Nation</span></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <div class="section-head"><h2>Beyond Academics</h2></div>
+          <ul class="extra-list">
+            <li><strong>Communication Enhancement Committee</strong><span>Member · SSBF, 2026</span></li>
+            <li><strong>Sports Club (Fateh)</strong><span>Senior Member · NMIMS Bengaluru, 2023</span></li>
+            <li><strong>Finance Club (Vitta Vibhava)</strong><span>Senior Member · NMIMS Bengaluru, 2023</span></li>
+            <li><strong>Research Publication</strong><span>Published a research paper in Operations in Agriculture in EPRA Journal, 2023</span></li>
+            <li><strong>Tare Zameen Foundation</strong><span>Fundraising Intern · Volunteer, 2022</span></li>
+            <li><strong>School Athletics</strong><span>Silver medal · 4 × 100 m relay, 2018</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+    <footer>SAHIL KOHLI · MBA BANKING &amp; FINANCE · SSBF PUNE · 2026–2028</footer>
+  </main>
+</body>
+</html>
